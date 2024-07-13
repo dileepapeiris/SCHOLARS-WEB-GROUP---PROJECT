@@ -1,11 +1,3 @@
-/* CSS CODE OF THARUSHA */
-
-/* CSS CODE OF HASMINI */
-
-/* CSS CODE OF DILEEPA */
-
-/*editor-page css */
-
 body {
   background-image: url("Images/Student4/EditorPage/editorpagebackgroudimage.jpg");
   background-repeat: repeat-y;
@@ -14,12 +6,10 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-
-#editor-image { 
+#editor-image {
   width: 509px;
-  height:490px;
+  height: 490px;
   background-color: aliceblue;
-
 }
 
 #editor-image-section {
@@ -31,7 +21,7 @@ body {
 }
 
 #editor-info-page-down-button {
-  background-color: brown
+  background-color: brown;
 }
 
 #editor-creations-section {
