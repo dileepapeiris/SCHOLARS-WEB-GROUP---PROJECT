@@ -1,7 +1,17 @@
+.navigation-bar {
+  background-color: hsl(0, 0%, 0%);
+  color: aliceblue;
+}
+
 .image-caption {
   background-color: black;
 }
 
 .image-caption h2 {
-    color: beige;
+  color: beige;
+}
+
+#footer-section h2 {
+  color: azure;
+  background-color: black;
 }

@@ -1,0 +1,13 @@
+#footer-section h2 {
+  color: azure;
+  background-color: black;
+}
+
+.navigation-bar {
+  background-color: hsl(0, 0%, 0%);
+  color: aliceblue;
+}
+
+body {
+  background-image: url(Images/Student4/ContentPage/backgroundimage.jpg);
+}
