@@ -1,3 +1,24 @@
-svg rect {
-    color: white;
+body {
+  background-image: url(Images/Student4/SiteMap/backgroundimage.jpg);
 }
+
+svg a:hover rect {
+  fill: green;
+  stroke: white;
+}
+
+svg a:hover text {
+  fill: white;
+}
+
+#site-map-section {
+  background-color: rgba(203, 195, 195, 0.215);
+}
+
+#site-map-section h1 {
+  color: rgb(230, 227, 227);
+}
+
+/*#svg-section {
+  background-color: aliceblue;
+}*/
