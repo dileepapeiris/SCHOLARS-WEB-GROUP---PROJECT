@@ -11,7 +11,7 @@ body {
   background-image: url("Images/Student4/GalleryPage/d798571efb75d26b0ece1c936bcf6368.jpg");
   background-position: center;
   background-size: cover;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
+  overflow-x: hidden;
   min-height: 100vh;
 }
 
@@ -27,30 +27,36 @@ body {
   z-index: 1000;
 }
 
-.gallery-container {
+.gallery-section {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
-  padding: 120px 20px; /* Added padding to avoid overlap with navigation bar */
+  padding: 120px 20px;
+  position: relative;
 }
 
-.thumbnail {
-  position: relative;
+
+
+.thumbnail1 , .thumbnail2 ,.thumbnail3 ,.thumbnail5,.thumbnail6 {
+  position: absolute;
   cursor: pointer;
   overflow: hidden;
 }
 
-.thumbnail img {
+.thumbnail4{
+  position: absolute;
+  top: 500px;
+}
+
+.img {
   width: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.thumbnail:hover img {
+/*.thumbnail:hover img {
   transform: scale(1.05);
-}
-
-
+}*/
 
 .img-1 {
   height: 400px;
@@ -64,8 +70,10 @@ body {
   height: 500px;
 }
 
-.img-4,
-.img-5,
+.img-5 {
+  height: 300px;
+}
+
 .img-6 {
-  height: 800px; /* Equal height for images in the third column */
+  height: 200px;
 }
