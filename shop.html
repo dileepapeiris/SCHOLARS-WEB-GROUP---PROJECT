@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life on Land Shop</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: url("Images/Student1/Shop/ShopBackground.jpg") no-repeat
+          center center fixed;
+        background-size: cover;
+        color: #333;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      .shop-container {
+        max-width: 75%;
+        margin-right: 20px;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .product {
+        width: calc(
+          26.66% - 15px
+        ); /* Adjusted to make each product box 18% smaller */
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .product:hover {
+        transform: translateY(-5px);
+      }
+      .product img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+      .product h3 {
+        margin: 0;
+        font-size: 1.2rem;
+        color: #333;
+      }
+      .product p {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #666;
+      }
+      .product .price {
+        font-weight: bold;
+        color: #333;
+      }
+      .product .quantity {
+        width: 50px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box; /* Ensure padding is included in the width */
+      }
+      .product .quantity-label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      .product .size {
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+      .product button {
+        margin-top: auto;
+        padding: 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+      }
+      .product button:hover {
+        background-color: #45a049;
+      }
+      .cart {
+        width: 25%;
+        position: fixed;
+        right: 20px;
+        top: 80px; /* Adjusted cart height from the top */
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        height: calc(
+          100vh - 140px
+        ); /* Adjusted cart height based on screen size */
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .cart h2 {
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+      }
+      .cart-items {
+        margin-top: 20px;
+        flex: 1; /* Make cart items scrollable */
+      }
+      .cart-item {
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #f0f0f0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+      .cart-item .item-details {
+        flex: 1;
+      }
+      .cart-item span {
+        font-weight: bold;
+      }
+      .cart-item button {
+        background-color: #f44336;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: auto;
+      }
+      .cart-item button:hover {
+        background-color: #e53935;
+      }
+      .checkout-button {
+        margin-top: auto;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        width: 100%;
+      }
+      .checkout-button:hover {
+        background-color: #0056b3;
+      }
+      .heading-container {
+        text-align: center;
+        background-color: rgba(45, 243, 160, 0.856);
+        padding: 10px 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        width: 84%; /* Reduced by 16% */
+      }
+      .shop-description {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1024px) {
+        body {
+          flex-direction: column;
+          align-items: center;
+        }
+        .shop-container {
+          max-width: 100%;
+          margin-right: 0;
+        }
+        .cart {
+          position: relative;
+          width: 100%;
+          margin-top: 20px;
+          height: auto;
+          overflow-y: visible;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shop-container">
+      <div class="heading-container">
+        <h1>Our Shop</h1>
+      </div>
+      <div class="products" id="products"></div>
+      <div class="shop-description">
+        <p>
+          All profits from this shop go towards funding charity initiatives for
+          environmental conservation.
+        </p>
+      </div>
+    </div>
+    <div class="cart">
+      <h2>Cart</h2>
+      <div class="cart-items" id="cart-items"></div>
+      <button class="checkout-button" onclick="checkout()">Checkout</button>
+    </div>
+
+    <script>
+      const products = [
+        {
+          id: 1,
+          title: "Nature Painting",
+          description: "Beautiful painting of nature.",
+          price: 20,
+          image: "Images/Student1/Shop/Nature Painting.jpg",
+        },
+        {
+          id: 2,
+          title: "Eco-friendly Mug",
+          description: "Mug made from recycled materials.",
+          price: 10,
+          image: "Images/Student1/Shop/Eco-friendly Mug.jpg",
+        },
+        {
+          id: 3,
+          title: "T-shirt",
+          description: "T-shirt with a nature print.",
+          price: 15,
+          image: "Images/Student1/Shop/t-shirt.jpg",
+          sizes: ["Small", "Medium", "Large"],
+        },
+        {
+          id: 4,
+          title: "Recycled Notebook",
+          description: "Notebook made from recycled paper.",
+          price: 5,
+          image: "Images/Student1/Shop/Recycled Notebook.jpg",
+        },
+        {
+          id: 5,
+          title: "Poster",
+          description: "Poster of a beautiful landscape.",
+          price: 8,
+          image: "Images/Student1/Shop/Poster.jpg",
+          sizes: ["Small", "Medium", "Large"],
+        },
+        {
+          id: 6,
+          title: "Plant Seeds",
+          description: "Pack of various plant seeds.",
+          price: 12,
+          image: "Images/Student1/Shop/Plant seeds.jpg",
+        },
+        {
+          id: 7,
+          title: "Calendar",
+          description: "Calendar with nature photos.",
+          price: 18,
+          image: "Images/Student1/Shop/calendar.png",
+        },
+        {
+          id: 8,
+          title: "Bookmark",
+          description: "Bookmark made out of recycled materials.",
+          price: 3,
+          image: "Images/Student1/Shop/bookmark.jpg",
+          sizes: ["Small", "Medium", "Large"],
+        },
+        {
+          id: 9,
+          title: "Eco-friendly Bag",
+          description: "Reusable bag made from natural fibers.",
+          price: 25,
+          image: "Images/Student1/Shop/eco-friendly bag.jpg",
+          sizes: ["Small", "Medium", "Large"],
+        },
+        {
+          id: 10,
+          title: "Keychain",
+          description: "Keychain made out of recycled materials.",
+          price: 7,
+          image: "Images/Student1/Shop/keychain.jpg",
+        },
+        {
+          id: 11,
+          title: "Plant Pot",
+          description: "Pot for your plants.",
+          price: 22,
+          image: "Images/Student1/Shop/Plant pot.jpg",
+        },
+        {
+          id: 12,
+          title: "Sticker Pack",
+          description: "Sticker pack to spread awareness.",
+          price: 6,
+          image: "Images/Student1/Shop/Stickers.jpg",
+          sizes: ["Small", "Medium", "Large"],
+        },
+      ];
+
+      if (!localStorage.getItem("cart")) {
+        localStorage.setItem("cart", JSON.stringify([]));
+      }
+
+      function loadProducts() {
+        const productsContainer = document.getElementById("products");
+        products.forEach((product) => {
+          let sizeOptions = "";
+          if (product.sizes) {
+            sizeOptions = `
+            <select class="size">
+              ${product.sizes
+                .map((size) => `<option>${size}</option>`)
+                .join("")}
+            </select>
+          `;
+          }
+          const productElement = document.createElement("div");
+          productElement.className = "product";
+          productElement.innerHTML = `
+          <img src="${product.image}" alt="${product.title}">
+          <h3>${product.title}</h3>
+          <p>${product.description}</p>
+          <p class="price">$${product.price}</p>
+          ${sizeOptions}
+          <label class="quantity-label" for="quantity-${product.id}">Quantity: </label>
+          <input type="number" id="quantity-${product.id}" class="quantity" min="1" value="1">
+          <button onclick="addToCart(${product.id})">Add to Cart</button>
+        `;
+          productsContainer.appendChild(productElement);
+        });
+      }
+
+      function addToCart(productId) {
+        const quantity = parseInt(
+          document.getElementById(`quantity-${productId}`).value
+        );
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const product = products.find((p) => p.id === productId);
+        const cartItemIndex = cart.findIndex((item) => item.id === productId);
+
+        if (cartItemIndex !== -1) {
+          cart[cartItemIndex].quantity += quantity;
+        } else {
+          const sizeElement = document.getElementById(`size-${productId}`);
+          const size = sizeElement ? sizeElement.value : null;
+          cart.push({ ...product, quantity, size });
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCartItems();
+      }
+
+      function displayCartItems() {
+        const cartItemsContainer = document.getElementById("cart-items");
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cartItemsContainer.innerHTML = "";
+        cart.forEach((item) => {
+          const cartItemElement = document.createElement("div");
+          cartItemElement.className = "cart-item";
+          cartItemElement.innerHTML = `
+          <div class="item-details">
+            <span>${item.title} - ${item.quantity} x $${item.price}</span>
+            ${item.size ? `<br>Size: ${item.size}` : ""}
+          </div>
+          <button onclick="removeFromCart(${item.id})">Remove</button>
+        `;
+          cartItemsContainer.appendChild(cartItemElement);
+        });
+      }
+
+      function removeFromCart(productId) {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart = cart.filter((item) => item.id !== productId);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCartItems();
+      }
+
+      function checkout() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        if (cart.length > 0) {
+          window.location.href = "checkout.html";
+        } else {
+          alert("Please add at least one product to the cart.");
+        }
+      }
+
+      window.onload = function () {
+        loadProducts();
+        displayCartItems();
+      };
+    </script>
+  </body>
+</html>
