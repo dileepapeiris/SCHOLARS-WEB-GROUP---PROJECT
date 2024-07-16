@@ -62,39 +62,40 @@
       </div>
     </div>
 
-    <div class="extended-view-section" id="extendedView">
-      <button class="close-button" onclick="closeExtendedView()">Close</button>
-      <img id="extendedImage" src="" alt="" />
-      <p id="extendedDescription"></p>
-      <div id="changer">
-        <label for="colorPicker">Background Color:</label>
-        <input type="color" id="colorPicker" onchange="customizeColor()" />
-        <label for="fontPicker">Font Style:</label>
-        <select id="fontPicker" onchange="customizeFont()">
-          <option value="Arial">Arial</option>
-          <option value="Georgia">Georgia</option>
-          <option value="Times New Roman">Times New Roman</option>
-          <option value="Courier New">Courier New</option>
-        </select>
-      </div>
-    </div>
 
-    <div class="Description">
-      <p>
-        1xdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </p>
-      <p>
-        2xdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </p>
-      <p>
-        3xdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </p>
-      <p>
-        4xdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </p>
-      <p>
-        5xdfdddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-      </p>
+
+    <div class="extended-view-section" id="extendedView">
+      <div class="extended-view-section" id="extendedView">
+        <div class="close-button-section">
+          <button class="close-button" onclick="closeExtendedView()">
+            Close
+          </button>
+        </div>
+      
+      <div class="extended-content">
+        <h2 id="extendedTitle">Title</h2>
+        <p id="extendedDescription">Description</p>
+
+        <div id="changer">
+          <label for="colorPicker">Background Color:</label>
+          <input type="color" id="colorPicker" onchange="customizeColor()" />
+          <label for="fontPicker">Font Style:</label>
+          <select id="fontPicker" onchange="customizeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+      </div>
+      <div class="extended-image-section">
+        <img id="extendedImage" src="" alt="" />
+      </div>
+      
+      <button class="slider-button-left" onclick="previousImage()">&#10094;</button>
+      <button class="slider-button-right" onclick="nextImage()">&#10095;</button>
+     
+      
     </div>
 
     <script src="gallery.js"></script>

@@ -1,18 +1,40 @@
-document.querySelectorAll(".thumbnail").forEach((thumbnail) => {
-  thumbnail.addEventListener("click", () => {
-    const imgSrc = thumbnail.querySelector("img").src;
-    const imgAlt = thumbnail.querySelector("Description").p;
-    document.getElementById("extendedImage").src = imgSrc;
-    document.getElementById("extendedDescription").textContent = imgAlt;
-    document.getElementById("extendedView").style.display = "flex";
-  });
+const images = [
+  {
+    src: "Images/Student4/GalleryPage/image4.jpg",
+    title: "Title 1",
+    description: "Description of image 1",
+  },
+  {
+    src: "Images/Student4/GalleryPage/image3.jpeg",
+    title: "Title 2",
+    description: "Description of image 2",
+  },
+  {
+    src: "Images/Student4/GalleryPage/image2.jpg",
+    title: "Title 3",
+    description: "Description of image 3",
+  },
+  {
+    src: "Images/Student4/GalleryPage/image1.jpg",
+    title: "Title 4",
+    description: "Description of image 4",
+  },
+  {
+    src: "Images/Student4/GalleryPage/image5.jpg",
+    title: "Title 5",
+    description: "Description of image 5",
+  },
+];
 
-  thumbnail.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-      thumbnail.click();
-    }
-  });
-});
+let currentIndex = 0;
+
+function openExtendedView(imageSrc, title, description) {
+  document.getElementById("extendedImage").src = imageSrc;
+  document.getElementById("extendedTitle").textContent = title;
+  document.getElementById("extendedDescription").textContent = description;
+  document.getElementById("extendedView").style.display = "block";
+  currentIndex = images.findIndex((image) => image.src === imageSrc);
+}
 
 function closeExtendedView() {
   document.getElementById("extendedView").style.display = "none";
@@ -27,3 +49,26 @@ function customizeFont() {
   const font = document.getElementById("fontPicker").value;
   document.getElementById("extendedView").style.fontFamily = font;
 }
+
+function previousImage() {
+  currentIndex =
+    currentIndex - 1 + images.length < 0
+      ? images.length - 1
+      : (currentIndex - 1 + images.length) % images.length;
+  const { src, title, description } = images[currentIndex];
+  openExtendedView(src, title, description);
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  const { src, title, description } = images[currentIndex];
+  openExtendedView(src, title, description);
+}
+
+document.querySelectorAll(".thumbnail img").forEach((img) => {
+  img.addEventListener("click", function () {
+    const title = this.nextElementSibling.textContent;
+    const description = this.alt;
+    openExtendedView(this.src, title, description);
+  });
+});

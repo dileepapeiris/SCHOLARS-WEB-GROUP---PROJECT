@@ -115,9 +115,6 @@ body {
 
 .extended-view-section {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: right;
   position: fixed;
   top: 0;
   left: 0;
@@ -125,36 +122,48 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
-  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1000;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto auto auto;
 }
 
-.extended-view-section img {
-  max-width: 90%;
-  max-height: 80%;
-  margin-bottom: 20px;
+.extended-image-section {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
 }
 
-.extended-view-section .close-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-bottom: 20px;
+.extended-image-section img {
+  max-width: 100%;
+  height: auto;
 }
 
-.extended-view-section #changer {
-  display: flex;
-  gap: 10px;
-  align-items: center;
+.extended-content {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
 }
 
-.extended-view-section label {
-  font-size: 16px;
+.close-button-section {
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.extended-view-section input,
-.extended-view-section select {
-  padding: 5px;
-  font-size: 16px;
+.slider-button-left {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  height: 70px;
+  width: 25px;
+}
+
+.slider-button-right {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  height: 70px;
+  width: 25px;
 }
