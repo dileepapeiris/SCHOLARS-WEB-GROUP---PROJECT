@@ -18,6 +18,7 @@ svg a:hover text {
 
 #site-map-section {
   background-color: rgba(203, 195, 195, 0.215);
+  display: flex;
 }
 
 #site-map-section h1 {
