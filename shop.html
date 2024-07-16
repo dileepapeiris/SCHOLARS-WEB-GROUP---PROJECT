@@ -63,18 +63,21 @@
         font-weight: bold;
         color: #333;
       }
+      .product .quantity-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .product .quantity-label {
+        margin-right: 10px;
+        font-weight: bold;
+      }
       .product .quantity {
         width: 50px;
         padding: 5px;
         border: 1px solid #ccc;
         border-radius: 5px;
-        margin-bottom: 10px;
-        box-sizing: border-box; /* Ensure padding is included in the width */
-      }
-      .product .quantity-label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
+        box-sizing: border-box;
       }
       .product .size {
         margin-bottom: 10px;
@@ -160,6 +163,8 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         width: 100%;
+        position: sticky; /* Set position to sticky */
+        bottom: 20px; /* Adjusted distance from bottom */
       }
       .checkout-button:hover {
         background-color: #0056b3;
@@ -293,7 +298,7 @@
         {
           id: 11,
           title: "Plant Pot",
-          description: "Pot for your plants.",
+          description: "Decorative plant pot made from recycled materials.",
           price: 22,
           image: "Images/Student1/Shop/Plant pot.jpg",
         },
@@ -307,9 +312,8 @@
         },
       ];
 
-      if (!localStorage.getItem("cart")) {
-        localStorage.setItem("cart", JSON.stringify([]));
-      }
+      // Clear cart when loading the shop page
+      localStorage.removeItem("cart");
 
       function loadProducts() {
         const productsContainer = document.getElementById("products");
@@ -317,25 +321,25 @@
           let sizeOptions = "";
           if (product.sizes) {
             sizeOptions = `
-            <select class="size">
-              ${product.sizes
-                .map((size) => `<option>${size}</option>`)
-                .join("")}
-            </select>
-          `;
+          <select class="size" id="size-${product.id}">
+            ${product.sizes.map((size) => `<option>${size}</option>`).join("")}
+          </select>
+        `;
           }
           const productElement = document.createElement("div");
           productElement.className = "product";
           productElement.innerHTML = `
-          <img src="${product.image}" alt="${product.title}">
-          <h3>${product.title}</h3>
-          <p>${product.description}</p>
-          <p class="price">$${product.price}</p>
-          ${sizeOptions}
+        <img src="${product.image}" alt="${product.title}">
+        <h3>${product.title}</h3>
+        <p>${product.description}</p>
+        <p class="price">$${product.price}</p>
+        ${sizeOptions}
+        <div class="quantity-container">
           <label class="quantity-label" for="quantity-${product.id}">Quantity: </label>
           <input type="number" id="quantity-${product.id}" class="quantity" min="1" value="1">
-          <button onclick="addToCart(${product.id})">Add to Cart</button>
-        `;
+        </div>
+        <button onclick="addToCart(${product.id})">Add to Cart</button>
+      `;
           productsContainer.appendChild(productElement);
         });
       }
@@ -369,12 +373,12 @@
           const cartItemElement = document.createElement("div");
           cartItemElement.className = "cart-item";
           cartItemElement.innerHTML = `
-          <div class="item-details">
-            <span>${item.title} - ${item.quantity} x $${item.price}</span>
-            ${item.size ? `<br>Size: ${item.size}` : ""}
-          </div>
-          <button onclick="removeFromCart(${item.id})">Remove</button>
-        `;
+        <div class="item-details">
+          <span>${item.title} - ${item.quantity} x $${item.price}</span>
+          ${item.size ? `<br>Size: ${item.size}` : ""}
+        </div>
+        <button onclick="removeFromCart(${item.id})">Remove</button>
+      `;
           cartItemsContainer.appendChild(cartItemElement);
         });
       }
