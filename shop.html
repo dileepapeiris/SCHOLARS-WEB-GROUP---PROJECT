@@ -27,9 +27,7 @@
         gap: 20px;
       }
       .product {
-        width: calc(
-          26.66% - 15px
-        ); /* Adjusted to make each product box 18% smaller */
+        width: calc(26.66% - 15px);
         padding: 20px;
         background: #fff;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -105,14 +103,12 @@
         width: 25%;
         position: fixed;
         right: 20px;
-        top: 80px; /* Adjusted cart height from the top */
+        top: 80px;
         background: #fff;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
-        height: calc(
-          100vh - 140px
-        ); /* Adjusted cart height based on screen size */
+        height: calc(100vh - 140px);
         overflow-y: auto;
         display: flex;
         flex-direction: column;
@@ -124,7 +120,7 @@
       }
       .cart-items {
         margin-top: 20px;
-        flex: 1; /* Make cart items scrollable */
+        flex: 1;
       }
       .cart-item {
         margin-bottom: 10px;
@@ -163,8 +159,8 @@
         cursor: pointer;
         transition: background-color 0.3s ease;
         width: 100%;
-        position: sticky; /* Set position to sticky */
-        bottom: 20px; /* Adjusted distance from bottom */
+        position: sticky;
+        bottom: 20px;
       }
       .checkout-button:hover {
         background-color: #0056b3;
@@ -175,7 +171,7 @@
         padding: 10px 20px;
         border-radius: 8px;
         margin-bottom: 20px;
-        width: 84%; /* Reduced by 16% */
+        width: 84%;
       }
       .shop-description {
         text-align: center;
@@ -312,7 +308,6 @@
         },
       ];
 
-      // Clear cart when loading the shop page
       localStorage.removeItem("cart");
 
       function loadProducts() {
