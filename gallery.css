@@ -1,17 +1,65 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-image: url("Images/Student4/GalleryPage/d798571efb75d26b0ece1c936bcf6368.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  min-height: 100vh;
+}
+
 .navigation-bar {
-  background-color: hsl(0, 0%, 0%);
-  color: aliceblue;
+  background-color: black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 120px 20px; /* Added padding to avoid overlap with navigation bar */
+}
+
+.thumbnail img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-1 {
+  height: 200px;
+}
+
+.img-2 {
+  height: 330px;
+}
+
+.img-3 {
+  height: 430px;
+}
+
+.img-4 {
+  height: 45px;
+}
+
+.img-5 {
+  height: 10px;
 }
 
 .image-caption {
-  background-color: black;
-}
-
-.image-caption h2 {
-  color: beige;
-}
-
-#footer-section h2 {
-  color: azure;
-  background-color: black;
+  text-align: center;
+  padding: 10px 0;
 }
