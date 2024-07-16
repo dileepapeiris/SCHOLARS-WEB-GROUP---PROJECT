@@ -1,0 +1,38 @@
+body {
+  background-image: url(Images/Student4/SiteMap/backgroundimage.jpg);
+}
+
+.navigation-bar {
+  background-color: hsl(0, 0%, 0%);
+  color: aliceblue;
+}
+
+svg a:hover rect {
+  fill: green;
+  stroke: white;
+}
+
+svg a:hover text {
+  fill: white;
+}
+
+#site-map-section {
+  background-color: rgba(203, 195, 195, 0.215);
+  display: flex;
+}
+
+#site-map-section h1 {
+  color: rgb(230, 227, 227);
+}
+
+#footer-section {
+  background-color: black;
+}
+
+#footer-section h2 {
+  color: azure;
+}
+
+/*#svg-section {
+  background-color: aliceblue;
+}*/

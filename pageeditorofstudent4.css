@@ -1,0 +1,46 @@
+body {
+  background-image: url("Images/Student4/EditorPage/editorpagebackgroudimage.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+#editor-image {
+  width: 509px;
+  height: 490px;
+  background-color: aliceblue;
+}
+
+#editor-image-section {
+  background-color: rgb(211, 180, 24);
+}
+
+#editor-details-section {
+  background-color: aquamarine;
+}
+
+#editor-info-page-down-button {
+  background-color: brown;
+}
+
+#editor-creations-section {
+  background-color: aqua;
+}
+
+#editor-creations-topic {
+  background-color: darkcyan;
+}
+
+#gallery-details {
+  background-color: blue;
+}
+
+#sitemap-details {
+  background-color: rgb(193, 15, 15);
+}
+
+#content-page-details {
+  background-color: rgb(198, 246, 8);
+}
+/* gallery-css */

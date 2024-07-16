@@ -1,0 +1,41 @@
+.gallery-class-container {
+  background-color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.gallery-class-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.thumbnail1 {
+  background-color: aquamarine;
+}
+
+.thumbnail2 {
+  background-color: rgb(238, 35, 79);
+}
+
+.thumbnail3 {
+  background-color: rgb(57, 16, 221);
+}
+
+.thumbnail4 {
+  background-color: rgb(215, 7, 18);
+}
+
+.thumbnail5 {
+  background-color: aquamarine;
+}
+
+.thumbnail6 {
+  background-color: rgb(240, 255, 127);
+}

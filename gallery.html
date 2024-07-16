@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <div class="navigation-bar">
+      <h1>Nav Bar</h1>
+    </div>
 
+    <div id="gallery-section">
+      <div class="thumbnail1 thumbnail">
+        <img
+          class="img-1"
+          src="Images/Student4/GalleryPage/image4.jpg"
+          alt="Description of image 1"
+        />
+        <div class="title">Title 1</div>
+      </div>
+
+      <div class="thumbnail2 thumbnail">
+        <img
+          class="img-2"
+          src="Images/Student4/GalleryPage/image3.jpeg"
+          alt="Description of image 2"
+        />
+        <div class="title">Title 2</div>
+      </div>
+
+      <div class="thumbnail3 thumbnail">
+        <img
+          class="img-3"
+          src="Images/Student4/GalleryPage/image2.jpg"
+          alt="Description of image 3"
+        />
+        <div class="title">Title 3</div>
+      </div>
+
+      <div class="thumbnail4 thumbnail">
+        <img
+          class="img-4"
+          src="Images/Student4/GalleryPage/image1.jpg"
+          alt="Description of image 4"
+        />
+        <div class="title">Title 4</div>
+      </div>
+
+      <div class="thumbnail5 thumbnail">
+        <img
+          class="img-5"
+          src="Images/Student4/GalleryPage/image5.jpg"
+          alt="Description of image 5"
+        />
+        <div class="title">Title 5</div>
+      </div>
+
+      <div id="gallery-title" class="thumbnail">
+        <h2>Gallery</h2>
+      </div>
+    </div>
+
+
+
+    <div class="extended-view-section" id="extendedView">
+      <div class="extended-view-section" id="extendedView">
+        <div class="close-button-section">
+          <button class="close-button" onclick="closeExtendedView()">
+            Close
+          </button>
+        </div>
+      
+      <div class="extended-content">
+        <h2 id="extendedTitle">Title</h2>
+        <p id="extendedDescription">Description</p>
+
+        <div id="changer">
+          <label for="colorPicker">Background Color:</label>
+          <input type="color" id="colorPicker" onchange="customizeColor()" />
+          <label for="fontPicker">Font Style:</label>
+          <select id="fontPicker" onchange="customizeFont()">
+            <option value="Arial">Arial</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+          </select>
+        </div>
+      </div>
+      <div class="extended-image-section">
+        <img id="extendedImage" src="" alt="" />
+      </div>
+      
+      <button class="slider-button-left" onclick="previousImage()">&#10094;</button>
+      <button class="slider-button-right" onclick="nextImage()">&#10095;</button>
+     
+      
+    </div>
+
+    <script src="gallery.js"></script>
+  </body>
+</html>
