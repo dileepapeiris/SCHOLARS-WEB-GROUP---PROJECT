@@ -10,9 +10,11 @@
 body {
   overflow-x: hidden;
   min-height: 100vh;
+  background-image: url(Images/Student4/GalleryPage/backgroundimage.jpg);
+  background-size: cover;
 }
 
-.navigation-bar {
+header {
   position: fixed;
   right: 0;
   top: 0;
@@ -23,7 +25,32 @@ body {
   justify-content: space-between;
   padding: 10px 2%;
   background: transparent;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: #1c3329;
+}
+
+.navigation-bar {
+  display: flex;
+  margin-left: auto;
+  height: 80px;
+}
+
+.navigation-bar a {
+  color: white;
+  margin-left: 65px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid transparent;
+  transition: all 0.55s ease;
+  justify-content: center;
+}
+
+.navigation-bar a:hover {
+  border-bottom: 3px solid white;
+}
+
+.navigation-bar a.active {
+  border-bottom: 3px solid #56e161;
+  color: #56e161;
 }
 
 #gallery-section {
@@ -103,9 +130,8 @@ body {
 }
 
 #gallery-title {
-  background-color: aliceblue;
+  background-color: rgba(16, 225, 79, 0.353);
   text-align: center;
-  margin: 10px;
   padding: 10px;
   color: black;
   grid-column: 2 / 3;
@@ -144,16 +170,42 @@ span {
 .extended-image-section {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-around;
 }
 
 .extended-image-section img {
-  max-width: 100%;
+  width: auto;
   height: auto;
 }
 
 .extended-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+}
+
+#extendedTitle {
+  padding: auto;
+  font-size: 50px;
+}
+
+#extendedDescription {
+  padding: auto;
+  line-height: 1.7;
+  color: yellow;
+  font-size: 20px;
+}
+
+#changer {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
 }
 
 .close-button-section {
@@ -182,4 +234,40 @@ span {
 #extendedView,
 .image-description {
   display: none;
+}
+
+.close-button {
+  width: 80px;
+  height: 70px;
+  color: red;
+  font-size: 60px;
+  padding: auto;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul li {
+  margin: 0 15px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
 }
