@@ -8,29 +8,13 @@
 }
 
 body {
-  background-image: url("Images/Student4/EditorPage/d798571efb75d26b0ece1c936bcf6368.jpg");
+  background-image: url("Images/Student4/EditorPage/backgroundimage.jpg");
   background-position: center;
   background-size: cover;
   overflow-x: hidden; /* Hide horizontal scrollbar */
   min-height: 100vh;
 }
 
-.navigation-bar {
-  background-color: black;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.navigation-bar h1 {
-  color: white;
-  font-size: 24px;
-}
 
 #editor-section {
   position: relative;
@@ -130,68 +114,23 @@ body {
   font-size: 20px;
 }
 
-#footer-section {
-  text-align: center;
-  padding: 20px;
+#footer {
+  margin-top: 8px;
+  position: sticky;
+  width: 100%;
   background-color: black;
+  color: white;
+  text-align: center; /* Center align the content */
+  padding: 6px;
 }
 
-#footer-section h2 {
-  color: azure;
-  font-size: 20px;
+/* Change text color on hover */
+#footer a {
+  font-size: larger;
+  color: white;
+  text-decoration: none; /* Remove underlines */
 }
 
-@media (max-width: 768px) {
-  #editor-image {
-    width: 300px;
-    top: -50px;
-    right: 40px;
-  }
-
-  #editor-details-section {
-    margin: 0 20px;
-  }
-
-  #editor-intro,
-  #editor-name,
-  #editor-ids,
-  #editor-info-page-down-button {
-    text-align: center;
-  }
-
-  #editor-intro {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  #editor-name {
-    font-size: 35px;
-    margin-bottom: 10px;
-  }
-
-  #editor-ids {
-    font-size: 16px;
-    line-height: 1.8;
-  }
-
-  #editor-info-page-down-button {
-    font-size: 18px;
-  }
-
-  #editor-creations-topic h1,
-  #gallery-details h1,
-  #sitemap-details h1,
-  #content-page-details h1 {
-    font-size: 20px;
-  }
-
-  #gallery-details p,
-  #sitemap-details p,
-  #content-page-details p {
-    font-size: 16px;
-  }
-
-  #footer-section h2 {
-    font-size: 18px;
-  }
+#footer a:hover {
+  color: #e3f800;
 }
