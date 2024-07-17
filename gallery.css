@@ -8,23 +8,22 @@
 }
 
 body {
-  background-image: url("Images/Student4/GalleryPage/d798571efb75d26b0ece1c936bcf6368.jpg");
-  background-position: center;
-  background-size: cover;
   overflow-x: hidden;
   min-height: 100vh;
 }
 
 .navigation-bar {
-  background-color: black;
-  height: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+  justify-content: space-between;
+  padding: 10px 2%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #gallery-section {
@@ -111,6 +110,17 @@ body {
   color: black;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  height: 100%;
+  justify-content: center;
+}
+
+#gallery-title h2,
+span {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgba(8, 8, 8, 0.75);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .extended-view-section {
@@ -128,7 +138,7 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: 75% 25%;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
 }
 
 .extended-image-section {
@@ -166,4 +176,10 @@ body {
   right: 0px;
   height: 70px;
   width: 25px;
+}
+
+/* gallery.css */
+#extendedView,
+.image-description {
+  display: none;
 }
