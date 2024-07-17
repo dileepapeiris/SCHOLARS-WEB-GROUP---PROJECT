@@ -1,40 +1,27 @@
-const images = [
-  {
-    src: "Images/Student4/GalleryPage/image4.jpg",
-    title: "Title 1",
-    description: "Description of image 1",
-  },
-  {
-    src: "Images/Student4/GalleryPage/image3.jpeg",
-    title: "Title 2",
-    description: "Description of image 2",
-  },
-  {
-    src: "Images/Student4/GalleryPage/image2.jpg",
-    title: "Title 3",
-    description: "Description of image 3",
-  },
-  {
-    src: "Images/Student4/GalleryPage/image1.jpg",
-    title: "Title 4",
-    description: "Description of image 4",
-  },
-  {
-    src: "Images/Student4/GalleryPage/image5.jpg",
-    title: "Title 5",
-    description: "Description of image 5",
-  },
-];
-
 let currentIndex = 0;
+let thumbnails = document.querySelectorAll(".thumbnail");
 
-function openExtendedView(imageSrc, title, description) {
-  document.getElementById("extendedImage").src = imageSrc;
-  document.getElementById("extendedTitle").textContent = title;
-  document.getElementById("extendedDescription").textContent = description;
-  document.getElementById("extendedView").style.display = "block";
-  currentIndex = images.findIndex((image) => image.src === imageSrc);
+function openExtendedView(index) {
+  const thumbnail = thumbnails[index];
+  const img = thumbnail.querySelector("img");
+  const imgSrc = img.src;
+  const imgTitle = thumbnail.querySelector(".title").textContent;
+  const imgDescription =
+    thumbnail.querySelector(".image-description").textContent;
+
+  document.getElementById("extendedImage").src = imgSrc;
+  document.getElementById("extendedDescription").textContent = imgDescription;
+  document.getElementById("extendedTitle").textContent = imgTitle;
+  document.getElementById("extendedView").style.display = "flex";
+
+  currentIndex = index;
 }
+
+thumbnails.forEach((thumbnail, index) => {
+  thumbnail.addEventListener("click", () => {
+    openExtendedView(index);
+  });
+});
 
 function closeExtendedView() {
   document.getElementById("extendedView").style.display = "none";
@@ -47,28 +34,22 @@ function customizeColor() {
 
 function customizeFont() {
   const font = document.getElementById("fontPicker").value;
-  document.getElementById("extendedView").style.fontFamily = font;
+  document.getElementById("extendedTitle").style.fontFamily = font;
+  document.getElementById("extendedDescription").style.fontFamily = font;
 }
 
 function previousImage() {
-  currentIndex =
-    currentIndex - 1 + images.length < 0
-      ? images.length - 1
-      : (currentIndex - 1 + images.length) % images.length;
-  const { src, title, description } = images[currentIndex];
-  openExtendedView(src, title, description);
+  let newIndex = currentIndex - 1;
+  if (newIndex < 0) {
+    newIndex = thumbnails.length - 1;
+  }
+  openExtendedView(newIndex);
 }
 
 function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  const { src, title, description } = images[currentIndex];
-  openExtendedView(src, title, description);
+  let newIndex = currentIndex + 1;
+  if (newIndex >= thumbnails.length) {
+    newIndex = 0;
+  }
+  openExtendedView(newIndex);
 }
-
-document.querySelectorAll(".thumbnail img").forEach((img) => {
-  img.addEventListener("click", function () {
-    const title = this.nextElementSibling.textContent;
-    const description = this.alt;
-    openExtendedView(this.src, title, description);
-  });
-});

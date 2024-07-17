@@ -18,7 +18,12 @@
           src="Images/Student4/GalleryPage/image4.jpg"
           alt="Description of image 1"
         />
-        <div class="title">Title 1</div>
+        <div class="title">Web Weavers</div>
+        <div class="image-description">
+          Spiders are amazing builders, creating intricate webs to catch their
+          food. They help control the number of insects around us, which is
+          essential for keeping our environment balanced.
+        </div>
       </div>
 
       <div class="thumbnail2 thumbnail">
@@ -27,7 +32,12 @@
           src="Images/Student4/GalleryPage/image3.jpeg"
           alt="Description of image 2"
         />
-        <div class="title">Title 2</div>
+        <div class="title">Freshwater Friends</div>
+        <div class="image-description">
+          Even though they live in water, many fish are found in rivers and
+          lakes that are part of our land. They show how connected water and
+          land life are and remind us to keep our waterways clean
+        </div>
       </div>
 
       <div class="thumbnail3 thumbnail">
@@ -36,7 +46,12 @@
           src="Images/Student4/GalleryPage/image2.jpg"
           alt="Description of image 3"
         />
-        <div class="title">Title 3</div>
+        <div class="title">Mighty Giants</div>
+        <div class="image-description">
+          Elephants are huge animals that live in herds. They help shape their
+          environment by making paths and spreading seeds. Elephants are crucial
+          for the health of the places they live in.
+        </div>
       </div>
 
       <div class="thumbnail4 thumbnail">
@@ -45,7 +60,12 @@
           src="Images/Student4/GalleryPage/image1.jpg"
           alt="Description of image 4"
         />
-        <div class="title">Title 4</div>
+        <div class="title">Colorful Flyers</div>
+        <div class="image-description">
+          Birds add beauty and life to our world with their colorful feathers
+          and sweet songs. They help plants grow by spreading seeds and eating
+          pests, making them very important in nature.
+        </div>
       </div>
 
       <div class="thumbnail5 thumbnail">
@@ -54,24 +74,31 @@
           src="Images/Student4/GalleryPage/image5.jpg"
           alt="Description of image 5"
         />
-        <div class="title">Title 5</div>
+        <div class="title">Sly Hunters</div>
+        <div class="image-description">
+          Snakes are quiet and efficient predators. They play an important role
+          by keeping the populations of small animals in check. Their presence
+          helps maintain a healthy ecosystem.
+        </div>
       </div>
 
-      <div id="gallery-title" class="thumbnail">
-        <h2>Gallery</h2>
+      <div id="gallery-title" class="thumbnail-ed">
+        <h2>Life On</h2>
+        <span> Land </span>
       </div>
     </div>
 
-
-
     <div class="extended-view-section" id="extendedView">
-      <div class="extended-view-section" id="extendedView">
-        <div class="close-button-section">
-          <button class="close-button" onclick="closeExtendedView()">
-            Close
-          </button>
-        </div>
-      
+      <div class="close-button-section">
+        <button class="close-button" onclick="closeExtendedView()">
+          &times;
+        </button>
+      </div>
+
+      <div class="extended-image-section">
+        <img id="extendedImage" src="" alt="" />
+      </div>
+
       <div class="extended-content">
         <h2 id="extendedTitle">Title</h2>
         <p id="extendedDescription">Description</p>
@@ -88,14 +115,13 @@
           </select>
         </div>
       </div>
-      <div class="extended-image-section">
-        <img id="extendedImage" src="" alt="" />
-      </div>
-      
-      <button class="slider-button-left" onclick="previousImage()">&#10094;</button>
-      <button class="slider-button-right" onclick="nextImage()">&#10095;</button>
-     
-      
+
+      <button class="slider-button-left" onclick="previousImage()">
+        &#10094;
+      </button>
+      <button class="slider-button-right" onclick="nextImage()">
+        &#10095;
+      </button>
     </div>
 
     <script src="gallery.js"></script>
