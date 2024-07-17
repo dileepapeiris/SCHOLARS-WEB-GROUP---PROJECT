@@ -5,48 +5,6 @@ body {
   margin: 0;
 }
 
-header {
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1% 2%;
-
-  background-color: rgba(22, 79, 3, 0.723);
-}
-
-#navigation-list-section {
-  display: flex;
-  margin-left: auto;
-}
-
-#navigation-list-section a {
-  color: rgb(244, 244, 244);
-  margin-left: 65px;
-  font-size: 20px;
-  font-weight: 700;
-  border-bottom: 3px solid transparent;
-  transition: all 0.55s ease;
-  text-decoration: none;
-}
-
-#navigation-list-section a:hover {
-  border-bottom: 3px solid rgb(234, 255, 1);
-}
-
-#logo {
-  height: auto;
-  width: 25%;
-  border-radius: 10px;
-  margin-left: 50px;
-}
-ul {
-  list-style-type: none;
-}
 
 #link1 a,
 #link2 a {
