@@ -50,9 +50,10 @@ header ul {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 20px;
+  padding: auto;
   display: flex;
   justify-content: space-around;
+  
 }
 
 .footer ul {
