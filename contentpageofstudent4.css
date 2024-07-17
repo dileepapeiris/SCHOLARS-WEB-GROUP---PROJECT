@@ -4,7 +4,9 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
-
+#header-section-of-content-page{
+  background-color: rgba(20, 69, 8, 0.753);
+}
 #link1 a,
 #link2 a {
   text-decoration: none;
