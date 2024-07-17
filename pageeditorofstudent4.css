@@ -17,9 +17,8 @@ body {
 
 #editor-page-header {
   background-color: black;
- 
 }
-.main-content{
+.main-content {
   padding-top: 45px;
   padding-bottom: 10px;
   background: #031540;
@@ -28,91 +27,86 @@ body {
   margin-top: 550px;
 }
 
-.card-heading{
+.card-heading {
   margin-bottom: 40px;
 }
 
-.card-heading h2{
+.card-heading h2 {
   text-align: center;
   font-size: 35px;
   color: #00abf0;
-  -webkit-text-stroke: .5px #fff;
+  -webkit-text-stroke: 0.5px #fff;
 }
 
-.card-container{
+.card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
   margin-bottom: 90px;
-  
 }
 
-.card{
+.card {
   width: 355px;
-  background-color: #070F2B;
+  background-color: #070f2b;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0.5, 0.9);
   overflow: hidden;
   transition: transform 0.6s ease;
-  
 }
 
-.card:hover{
+.card:hover {
   transform: translateY(-25px);
 }
 
-.card img{
+.card img {
   padding: auto;
   width: 100%;
   height: auto;
-
-  
 }
 
-.card-content{
+.card-content {
   padding: 20px;
 }
 
-.card-content h1{
+.card-content h1 {
   font-size: 22px;
   font-weight: 800;
-  margin-bottom: 10px;   
+  margin-bottom: 10px;
 }
 
-.card-content{
+.card-content {
   font-size: 17px;
   margin-bottom: 20px;
   font-weight: 500;
   color: #fff;
 }
 
-.card-content p{
+.card-content p {
   margin-bottom: 20px;
 }
 
-.card-button{
+.card-button {
   display: inline;
   background-color: #00abf0;
   border-radius: 5px;
   padding: 8px 16px;
   margin-bottom: -10px;
   color: #031540;
-  transition: .5s;
+  transition: 0.5s;
 }
 
-.card-content a{
+.card-content a {
   font-size: 18px;
   font-weight: 600;
 }
 
-.card-content a:hover{
+.card-content a:hover {
   background: #00abf0;
   color: #fff;
   border-color: #00abf0;
   box-shadow: 0 0 10px #00abf0;
 }
-
 
 #editor-section {
   position: relative;
@@ -127,7 +121,6 @@ body {
   position: absolute;
   top: 0px;
   right: 80px;
-  
 }
 
 #editor-info-page-down-button-section {

@@ -8,8 +8,6 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1% 2%;
-  background: transparent;
-  
 }
 
 .navigation-list-section {
@@ -46,6 +44,7 @@ header {
 header ul {
   list-style-type: none;
 }
+
 
 .footer {
   background-color: black;
