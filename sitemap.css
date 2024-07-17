@@ -23,12 +23,12 @@ header{
   
 }
 
-.navlist{
+#navigation-list-section{
   display: flex;
   margin-left: auto;
 }
 
-.navlist a{
+#navigation-list-section a{
   color: white;
   margin-left: 65px;
   font-size: 20px;
@@ -38,16 +38,16 @@ header{
   text-decoration: none;
 }
 
-.navlist a:hover{
+#navigation-list-section a:hover{
   border-bottom: 3px solid white;
 }
 
-.navlist a.active {
+#navigation-list-section a.active {
   border-bottom: 3px solid #56E161;
   color: #56E161;    
 }
 
-.img{
+#logo{
   height: auto;
   width: 25%;
   border-radius: 10px;

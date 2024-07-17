@@ -14,44 +14,54 @@ body {
   background-size: cover;
 }
 
-header {
+header{
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 1000;
+  z-index: 1;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px 2%;
+  justify-content:space-between ;
+  padding: 1% 2%;
   background: transparent;
-  background: #1c3329;
+  background-color: rgba(0, 0, 0, 0.445);
+  
 }
 
-.navigation-bar {
+#navigation-list-section{
   display: flex;
   margin-left: auto;
-  height: 80px;
 }
 
-.navigation-bar a {
+#navigation-list-section a{
   color: white;
   margin-left: 65px;
   font-size: 20px;
   font-weight: 700;
   border-bottom: 3px solid transparent;
-  transition: all 0.55s ease;
-  justify-content: center;
+  transition: all .55s ease;
+  text-decoration: none;
 }
 
-.navigation-bar a:hover {
+#navigation-list-section a:hover{
   border-bottom: 3px solid white;
 }
 
-.navigation-bar a.active {
-  border-bottom: 3px solid #56e161;
-  color: #56e161;
+#navigation-list-section a.active {
+  border-bottom: 3px solid #56E161;
+  color: #56E161;    
 }
+
+#logo{
+  height: auto;
+  width: 25%;
+  border-radius: 10px;
+  margin-left: 50px;
+  
+  
+}
+
 
 #gallery-section {
   display: grid;
@@ -129,16 +139,24 @@ header {
   grid-row: 3 / 4;
 }
 
-#gallery-title {
-  background-color: rgba(16, 225, 79, 0.353);
-  text-align: center;
-  padding: 10px;
-  color: black;
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-  height: 100%;
-  justify-content: center;
+
+#gallery-title h1{
+  font-size: 70px;
+  font-weight: 600;
 }
+
+#h1-tag1{
+  color:rgb(211, 251, 10);
+  font-weight: 200;
+  letter-spacing: 10px;
+  -webkit-text-stroke: 1px black;
+}
+
+#h1-tag2{
+  color:#4f6f57;
+}
+
+
 
 #gallery-title h2,
 span {
@@ -248,15 +266,22 @@ span {
   background-color: black;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .footer ul {
   list-style: none;
-  padding: 2px;
-  margin: 0;
+  padding: auto;
   display: flex;
   justify-content: space-around;
+
+  
+}
+
+.footer p {
+  color: rgb(216, 223, 12);
 }
 
 .footer ul li {
@@ -264,7 +289,7 @@ span {
 }
 
 .footer ul li a {
-  color: white;
+  color: wheat;
   text-decoration: none;
 }
 
