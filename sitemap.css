@@ -1,38 +1,85 @@
 body {
   background-image: url(Images/Student4/SiteMap/backgroundimage.jpg);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .navigation-bar {
-  background-color: hsl(0, 0%, 0%);
-  color: aliceblue;
-}
-
-svg a:hover rect {
-  fill: green;
-  stroke: white;
-}
-
-svg a:hover text {
-  fill: white;
-}
-
-#site-map-section {
-  background-color: rgba(203, 195, 195, 0.215);
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2%;
+  background: transparent;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #site-map-section h1 {
   color: rgb(230, 227, 227);
+  margin-bottom: 1rem;
 }
 
-#footer-section {
+#svg-section {
+  width: 100%;
+  height: auto;
+  background-color: rgba(203, 195, 195, 0.215);
+}
+
+svg {
+  margin-top: 100px;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+}
+
+svg a:hover rect,
+svg a:focus rect {
+  fill: green;
+  stroke: white;
+}
+
+svg a:hover text,
+svg a:focus text {
+  fill: white;
+}
+
+svg a:focus {
+  outline: none;
+}
+
+.footer {
   background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 
-#footer-section h2 {
-  color: azure;
+.footer ul {
+  list-style: none;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
 }
 
-/*#svg-section {
-  background-color: aliceblue;
-}*/
+.footer ul li {
+  margin: 0 15px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
+}

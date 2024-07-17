@@ -8,23 +8,49 @@
 }
 
 body {
-  background-image: url("Images/Student4/GalleryPage/d798571efb75d26b0ece1c936bcf6368.jpg");
-  background-position: center;
-  background-size: cover;
   overflow-x: hidden;
   min-height: 100vh;
+  background-image: url(Images/Student4/GalleryPage/backgroundimage.jpg);
+  background-size: cover;
+}
+
+header {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2%;
+  background: transparent;
+  background: #1c3329;
 }
 
 .navigation-bar {
-  background-color: black;
-  height: 100px;
   display: flex;
-  align-items: center;
+  margin-left: auto;
+  height: 80px;
+}
+
+.navigation-bar a {
+  color: white;
+  margin-left: 65px;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 3px solid transparent;
+  transition: all 0.55s ease;
   justify-content: center;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
+}
+
+.navigation-bar a:hover {
+  border-bottom: 3px solid white;
+}
+
+.navigation-bar a.active {
+  border-bottom: 3px solid #56e161;
+  color: #56e161;
 }
 
 #gallery-section {
@@ -104,13 +130,23 @@ body {
 }
 
 #gallery-title {
-  background-color: aliceblue;
+  background-color: rgba(16, 225, 79, 0.353);
   text-align: center;
-  margin: 10px;
   padding: 10px;
   color: black;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  height: 100%;
+  justify-content: center;
+}
+
+#gallery-title h2,
+span {
+  font-size: 50px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: rgba(8, 8, 8, 0.75);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .extended-view-section {
@@ -128,22 +164,48 @@ body {
   display: grid;
   gap: 20px;
   grid-template-columns: 75% 25%;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto auto;
 }
 
 .extended-image-section {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-around;
 }
 
 .extended-image-section img {
-  max-width: 100%;
+  width: auto;
   height: auto;
 }
 
 .extended-content {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+}
+
+#extendedTitle {
+  padding: auto;
+  font-size: 50px;
+}
+
+#extendedDescription {
+  padding: auto;
+  line-height: 1.7;
+  color: yellow;
+  font-size: 20px;
+}
+
+#changer {
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
 }
 
 .close-button-section {
@@ -166,4 +228,46 @@ body {
   right: 0px;
   height: 70px;
   width: 25px;
+}
+
+/* gallery.css */
+#extendedView,
+.image-description {
+  display: none;
+}
+
+.close-button {
+  width: 80px;
+  height: 70px;
+  color: red;
+  font-size: 60px;
+  padding: auto;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 2px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer ul li {
+  margin: 0 15px;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  text-decoration: underline;
 }
