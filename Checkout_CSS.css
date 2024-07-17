@@ -9,6 +9,12 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+.header {
+  background-color: rgba(78, 72, 72, 0.99);
+}
+.footer {
+  background-color: rgba(78, 72, 72, 0.99);
+}
 .checkout-container {
   max-width: 800px;
   margin: 0 auto;
