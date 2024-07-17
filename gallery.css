@@ -7,6 +7,10 @@
   text-decoration: none;
 }
 
+header{
+  background-color: rgba(78, 72, 72, 0.785);
+}
+
 body {
   overflow-x: hidden;
   min-height: 100vh;
