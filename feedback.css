@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;   
+    font-family: 'Vollkorn', serif;
+    scroll-behavior: smooth;
+} 
+
+.container{    
+    width: 100%;
+    height: 100vh;   
+    background-image: linear-gradient(rgba(113, 242, 141, 0.7), rgba(76, 73, 64, 0.7)), url("Images/forest.jpg");    
+    background-position: center;
+    background-size: cover;
+    position: relative;   
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    height: 93px;
+    font-size: x-large;
+    background-color: #224528;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.top-nav .logo {
+    height: 93px;
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+form {
+    max-width: 600;
+    width: 60%;
+    margin: 0 auto;
+    padding: 1em;
+    background: rgba(222, 221, 221, 0.811);
+    border: 1px solid #ccc;
+    border-radius: 1 em;
+}
+
+h1 {
+    text-align: center;
+    -webkit-text-fill-color: rgb(91, 150, 91)
+}
+
+label {
+    margin-top: 1em;
+    text-align: center;
+}
+
+input, textarea, select {
+    border: 1px solid #000000;
+    padding: 0.5em;
+    font-size: .8em;
+    box-sizing: border-box;
+    background-color: #c6ded0c9;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 0.3em;
+}
+
+textarea {
+    resize: vertical;
+    width: 15em;
+}
+
+.rating-container {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+
+button {
+    margin-top: 1em;
+    padding: 0.4em;
+    width: 8em;
+    font-size: 0.9em;
+    border: none;
+    background: #71a57d;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0.3em; 
+}
+
+button[type="button"] {
+    background-color: rgb(75, 133, 75);
+}
+
+.error {
+    color: red;
+    margin-top: 0.5em;
+}
+
+.preview, .confirmation {
+    max-width: 600px;
+    margin: 1em auto;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    display: none;
+}
+
+.preview h2 {
+    margin-top: 0;
+}
+
+button {
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+

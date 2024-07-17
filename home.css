@@ -1,0 +1,110 @@
+body {
+    font-family: 'Vollkorn', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container{    
+    width: 100%;
+    height: 100vh;   
+    background-image: linear-gradient(rgba(113, 242, 141, 0.7), rgba(76, 73, 64, 0.7)), url("Images/forest.jpg");    
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+    display: flex;  
+}
+
+.top-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    height: 93px;
+    font-size: x-large;
+    background-color: #224528;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.top-nav .logo {
+    height: 93px;
+    margin-right: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-box{
+    width: 90%;
+    color: rgb(5, 5, 5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 40px;
+}
+
+.text-box p{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 25px;    
+    color: rgb(12, 12, 12);
+}
+
+.explore{
+    display: inline-block;
+    text-decoration: none;
+    color: #0c0c0c;
+    border: 1px solid #020202;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+.explore:hover{
+    background-color: #7eb763;
+    border: none;
+    color: #0e0e0e;
+    font-weight: 500;
+    transform: scale(1.1);
+}
+
+.evolution{
+    padding-top: 60px;
+    padding-bottom: 80px;
+    margin-inline: 3cm;   
+}
+
+.evolution h1{    
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 0.7cm;
+    
+}
+
+p{
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: justify;
+    font-size: 22px;
+    font-weight: 400;
+}
