@@ -4,6 +4,12 @@ body {
   margin: 0;
   padding: 0;
 }
+.header {
+  background-color: rgba(78, 72, 72, 0.99);
+}
+.footer {
+  background-color: rgba(78, 72, 72, 0.99);
+}
 .container {
   width: 80%;
   margin: 20px auto;
