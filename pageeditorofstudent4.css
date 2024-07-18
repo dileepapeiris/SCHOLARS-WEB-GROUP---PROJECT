@@ -85,6 +85,12 @@ body {
   background-color: black;
 }
 
+#editor-section {
+  position: relative;
+  margin-top: 150px;
+
+  padding: 20px;
+}
 
 #editor-creations-section{
   padding-top: 45px;
@@ -105,6 +111,8 @@ body {
   color: #00abf0;
   -webkit-text-stroke: 0.5px #fff;
 }
+
+/*editor creation section css stylings*/
 
 .editor-creations-column {
   display: flex;
