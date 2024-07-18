@@ -6,8 +6,7 @@ function openExtendedView(index) {
   const img = thumbnail.querySelector("img");
   const imgSrc = img.src;
   const imgTitle = thumbnail.querySelector(".title").textContent;
-  const imgDescription =
-    thumbnail.querySelector(".image-description").textContent;
+  const imgDescription = thumbnail.querySelector(".image-description").textContent;
 
   document.getElementById("extendedImage").src = imgSrc;
   document.getElementById("extendedDescription").textContent = imgDescription;

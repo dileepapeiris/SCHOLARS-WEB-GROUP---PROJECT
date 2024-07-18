@@ -14,10 +14,12 @@ body {
   background-size: cover;
 }
 
+/* navigation bar colour */
 #gallery-header-section {
   background-color: rgba(0, 0, 0, 0.445);
 }
 
+/* stylings for gallery view */
 #gallery-section {
   display: grid;
   gap: 20px;
@@ -102,6 +104,12 @@ body {
   color: #4f6f57;
 }
 
+/* stylings for extended view */
+#extendedView,
+.image-description {
+  display: none;
+}
+
 .extended-view-section {
   display: none;
   position: fixed;
@@ -137,17 +145,17 @@ body {
   grid-row: 2 / 3;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: space-around;
 }
 
 #extendedTitle {
-  padding: auto;
+  margin: auto;
   font-size: 50px;
 }
 
 #extendedDescription {
-  padding: auto;
+  margin: auto;
   line-height: 1.7;
   color: yellow;
   font-size: 20px;
@@ -161,6 +169,7 @@ body {
   gap: 10px;
 }
 
+/* stylings for buttons */
 .close-button-section {
   position: absolute;
   top: 10px;
@@ -183,20 +192,15 @@ body {
   width: 25px;
 }
 
-/* gallery.css */
-#extendedView,
-.image-description {
-  display: none;
-}
-
 .close-button {
   width: 80px;
   height: 70px;
   color: red;
   font-size: 60px;
-  padding: auto;
+  margin: auto;
 }
 
+/* stylings for footer */
 #gallery-footer {
   padding: 20px;
 }
