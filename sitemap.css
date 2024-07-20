@@ -6,7 +6,7 @@ body {
   box-sizing: border-box;
 }
 
-#sitemap-header-section{
+#sitemap-header-section {
   background-color: rgba(18, 1, 1, 0.83);
 }
 
@@ -44,8 +44,3 @@ svg a:focus text {
 svg a:focus {
   outline: none;
 }
-
-#footer-sitemap {
-
-}
-
