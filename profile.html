@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Januda</title>
+    <style>
+      header {
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1% 2%;
+        background: transparent;
+        background-color: rgba(78, 72, 72, 0.99);
+      }
+
+      .navigation-list-section {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .navigation-list-section a {
+        color: white;
+        margin-left: 65px;
+        font-size: 20px;
+        font-weight: 700;
+        border-bottom: 3px solid transparent;
+        transition: all 0.55s ease;
+        text-decoration: none;
+      }
+
+      .navigation-list-section a:hover {
+        border-bottom: 3px solid white;
+      }
+
+      .navigation-list-section a.active {
+        border-bottom: 3px solid #56e161;
+        color: #56e161;
+      }
+
+      .logo {
+        height: auto;
+        width: 25%;
+        border-radius: 10px;
+        margin-left: 50px;
+      }
+
+      header ul {
+        list-style-type: none;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px; /* Adjust as needed */
+      }
+
+      .footer {
+        color: white;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        background-color: rgba(78, 72, 72, 0.99);
+      }
+
+      .footer ul {
+        list-style: none;
+        padding: auto;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      .footer p {
+        color: rgb(216, 223, 12);
+      }
+
+      .footer ul li {
+        margin: 0 15px;
+      }
+
+      .footer ul li a {
+        color: wheat;
+        text-decoration: none;
+      }
+
+      .footer ul li a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="home.html"
+        ><img class="logo" src="Images/logo.JPG" alt="logo"
+      /></a>
+      <ul class="navigation-list-section">
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="gallery.html">GALLERY</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li>
+          <a href="profile.html" class="active">USER&nbsp;&nbsp;PROFILE</a>
+        </li>
+        <li><a href="feedback.html">FEEDBACK</a></li>
+        <li><a href="team.html">ABOUT&nbsp;&nbsp;US</a></li>
+        <li><a href="sitemap.html">SITE&nbsp;&nbsp;MAP</a></li>
+      </ul>
+
+      <div></div>
+    </header>
+    <div class="image-container">
+      <img
+        src="Images/Student3/Unavailable pages.jpeg"
+        alt="Webpage Unavailabled due to programmer leaving"
+      />
+    </div>
+    <br />
+
+    <footer class="footer">
+      <p>Team Storm Crushers</p>
+      <ul class="footerlist">
+        <li><a href="pageeditorofstudent1.html">Tharusha Kodithuwakku</a></li>
+        <li><a href="pageeditorofstudent2.html">Hasmini Kevinya</a></li>
+        <li><a href="pageeditorofstudent3.html">Januda Perera</a></li>
+        <li><a href="pageeditorofstudent4.html">Dileepa Peiris</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
